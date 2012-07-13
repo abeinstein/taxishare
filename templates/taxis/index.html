@@ -1,0 +1,11 @@
+
+<h1>Taxi Share</h1>
+<p>Here's all the taxis</p>
+
+<a href="/taxis/addTaxi">Add Taxi</a>
+
+<ul>
+	{% for t in taxiList %}
+		<li><a href='/taxis/{{ t.id }}'>{{t}}: {{ t.passengers.all|length }} passenger{{ t.passengers.all|pluralize}}</a></li>
+	{% endfor %}
+</ul>

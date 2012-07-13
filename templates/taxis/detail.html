@@ -1,0 +1,14 @@
+<h1>Taxi Detail</h1>
+{{ taxi }}
+<p>Passenger List</p>
+<ul>
+	{% for pass in taxi.passengers.all %}
+		<li>{{ pass }}</li>
+	{% endfor %}
+</ul>
+
+<h2>Add Passenger</h2>
+<form action="/taxis/{{ taxi.id }}/" method="post"> {% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit" />
+</form>
