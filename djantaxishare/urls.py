@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^$', 'taxis.views.home'),
     url(r'^taxis/', include('taxis.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^about/$', 'taxis.views.about'),
 )

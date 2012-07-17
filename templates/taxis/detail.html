@@ -1,5 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
 <h1>Taxi Detail</h1>
 {{ taxi }}
+
+<h2> {{ alert }} </h2>
 <p>Passenger List</p>
 <ul>
 	{% for pass in taxi.passengers.all %}
@@ -12,3 +17,4 @@
 	{{ form.as_p }}
 	<input type="submit" value="Submit" />
 </form>
+{% endblock %}

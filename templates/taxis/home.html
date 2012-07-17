@@ -1,8 +1,21 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<script>
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	</script>
+{% endblock %}
+
+{% block content %}
 <h1>Home</h1>
 
-<a href="/taxis">See Taxis</a>
+<a href="/taxis">See all taxis</a>
 
-<form action="/taxis/addTaxi/" method="post"> {% csrf_token %}
+<form action="/taxis/search/" method="post"> {% csrf_token %}
 	{{ form.as_p }}
-	<input type="submit" value="Submit" />
+	<input type="submit" value="Let's go!" />
 </form>
+
+{% endblock %}

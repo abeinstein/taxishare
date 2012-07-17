@@ -4,4 +4,5 @@ urlpatterns = patterns('taxis.views',
     url(r'^$', 'index'),
     url(r'^(?P<taxi_id>\d+)/$', 'detail'),
     url(r'^addTaxi/$', 'addTaxi'),
+    url(r'^search/$', 'manageTaxiRequest'),
 )
